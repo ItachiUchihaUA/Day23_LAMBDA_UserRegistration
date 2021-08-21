@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class UserTest {
+public class UserTest{
 	User u = new User();
 		@Test
 		public void firstNameIsValid() {
@@ -36,22 +36,6 @@ public class UserTest {
 			assertFalse(u.checkLastName("ujjwal"));
 		}
 		
-		@Test
-		public void emailIsValid() {
-			assertTrue(u.checkEmail("ujj.aak@gma.co.in"));
-		}
-		@Test
-		public void emailIsInvalidwithNoName() {
-			assertFalse(u.checkEmail(".aak@gmai.co.in"));
-		}
-		@Test
-		public void emailIsInvalidwithNoAtTheRate() {
-			assertFalse(u.checkEmail("ujjwal.aakgmai.co.in"));
-		}
-		@Test
-		public void emailIsInvalidwithNoDot() {
-			assertFalse(u.checkEmail("ujjwal.aak@gmailin"));
-		}
 		@Test
 		public void phoneNumberIsValid() {
 			assertTrue(u.checkPhone("91 9562095622"));
@@ -88,4 +72,5 @@ public class UserTest {
 		public void passwordIsInvalidWithSpecialChar() {
 			assertFalse(u.checkPassword("NoOneCaresBro123"));
 		}
+		
 }
