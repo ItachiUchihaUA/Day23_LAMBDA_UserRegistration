@@ -18,6 +18,6 @@ public class User {
 	}
 	
 	public boolean checkPassword(String s) {
-		return s.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}");
+		return s.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}");
 	}
 }
