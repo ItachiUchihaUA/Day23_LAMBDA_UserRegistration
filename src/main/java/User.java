@@ -1,6 +1,10 @@
 
 public class User {
 	
+	public static void main(String[] args) {
+		
+	}
+	
 	public boolean checkFirstName(String s) {
 		return s.matches("[A-Z][a-z]{2,}");
 	}
@@ -19,5 +23,11 @@ public class User {
 	
 	public boolean checkPassword(String s) {
 		return s.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}");
+	}
+}
+
+class InvalidInput extends Exception{
+	public String getMeassage() {
+		System.out.println("Invalid Input");
 	}
 }
